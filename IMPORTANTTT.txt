@@ -1,0 +1,1 @@
+Make sure to change the .hta file because it has placeholders. For making it into a exe. i highly recommend you use a software called The Batchman. (github.com/jeremyben/thebatchman). You can also edit the hta file using Notepad. Put all the files in a folder together and make sure to check (include other files in the source folder)!
