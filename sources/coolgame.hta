@@ -1,0 +1,92 @@
+<html>
+<head>
+<hta:application 
+APPLICATIONNAME="Program ALERT"
+ID="Program ALERT"
+border="none"
+innerborder="no"
+caption="no"
+sysmenu="no"
+maximizebutton="no"
+minimizebutton="no"
+icon="loader2.ico"
+scroll="no"
+scrollflat="yes"
+singleinstance="yes"
+showintaskbar="no"
+contextmenu="no"
+selection="no"/> 
+<meta http-equiv="x-ua-compatible" content="IE=9"/>
+<style>
+html, body {
+  background-color: #202940;
+  font-size: 90%;
+  margin: 10px;
+  line-height: 20px;
+  padding: 0;
+  font-family: Calibri;
+}
+h1 {
+  color: #007cd1;
+  font-size: 3em;
+  text-align: center;
+}
+h2 {
+  color: #fff;
+  font-weight: 1000;
+}
+.title {
+height: 22px;
+}
+h3,p {
+  color: #ccc;
+}
+.logo {
+  align-self: flex-start;
+}
+.close {
+  align-self: flex-end;
+}
+button {
+border-radius:2px;
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left:30px;
+border:none;
+background-color:#018934;
+color: white;
+}
+</style>
+<script type='text/javascript'> 
+window.onload = function() {
+  window.resizeTo(588, 340);
+  var left = (screen.width - 588) / 2;
+  var top = (screen.height - 340) / 2;
+  window.moveTo(left, top);
+};
+
+function closeWin() {
+  self.close();
+}
+        function RunFile() {
+        WshShell = new ActiveXObject("WScript.Shell");
+        WshShell.Run('"c:/Program Files/Avast Software/Avast/AvastUI.exe"', 1, false);
+        }
+</script>
+</head>
+<body scroll="no">
+<bgsound src="alert.mp3" autoplay></bgsound>
+<div class="title">
+  <img src="logo.png" width="69px" height="22px" class="logo" align="left">
+  <img src="close.png" align="right" onClick="closeWin()">
+</div>
+<center>
+<img src="icon.png">
+<h2><b>Threat secured</b></h2>
+<p>We've safely aborted connection on <b>placeholder.shit</b> because it was infected with <b>URL:PlaceHold</b></p>
+<p>Scan your computer for other viruses, too?</p>
+<button onClick=" RunFile(); closeWin()">SCAN MY PC</button>
+</center>
+</body>
+</html>
